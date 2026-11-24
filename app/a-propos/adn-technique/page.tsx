@@ -1,0 +1,5 @@
+import Card from '@/components/Card'
+export default function ADNPage() {
+  const skills = ['Architecture documentaire', 'Développement applicatif métier', 'Intégration SI et API', 'Sécurité informatique', 'IA et traitement automatique du langage', 'Infrastructure et hébergement souverain']
+  return <main className="px-6 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><h1 className="section-title">Un ADN profondément technique.</h1><p className="mt-5 section-sub">2PY n'est pas un revendeur. Nous développons nos propres solutions depuis l'origine.</p><div className="mt-12 grid gap-6 md:grid-cols-3">{skills.map(s => <Card key={s} icon="▣" title={s} description="Expertise interne mobilisable sur les projets documentaires exigeants." />)}</div><div className="mt-10 flex flex-wrap gap-3">{['PHP', 'SQLite', 'Python', 'Next.js', 'REST API', 'OCR', 'NLP', 'Linux', 'OVH France'].map(s => <span key={s} className="rounded-full bg-slate-100 px-4 py-2 text-sm font-bold">{s}</span>)}</div></div></main>
+}

@@ -1,0 +1,4 @@
+export default function EquipePage() {
+  const people = ['Fondateur / Architecte documentaire', 'Développeur principal — Dokee', 'Consultante ingénierie documentaire', 'Expert IA et automatisation']
+  return <main className="px-6 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><h1 className="section-title">L'équipe 2PY.</h1><p className="mt-5 section-sub">Des experts documentaires, des développeurs et des consultants — réunis autour d'une conviction commune.</p><div className="mt-12 grid gap-6 md:grid-cols-4">{people.map(p => <article key={p} className="card text-center"><div className="mx-auto mb-5 h-20 w-20 rounded-full bg-2py-100" /><h2 className="font-black text-ink">{p}</h2><p className="mt-3 text-sm text-muted">Profil générique à remplacer par les vrais profils avant mise en ligne.</p></article>)}</div></div></main>
+}
