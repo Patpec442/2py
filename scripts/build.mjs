@@ -407,24 +407,11 @@ pages.set('/references-historiques/', layout({
   ])}</div></section>`,
 }))
 
-pages.set('/dokee/', layout({
-  title: 'GEDeasy / Dokee, GED métier et workflows documentaires',
-  description: 'GEDeasy / Dokee illustre une GED métier 2PY : validation, indexation, traçabilité, workflow documentaire et modernisation.',
-  path: '/dokee/',
-  body: `${compactHero('GEDeasy / Dokee', 'Une réalisation métier issue de l’ingénierie documentaire 2PY.', 'GEDeasy / Dokee illustre une capacité logicielle : concevoir une GED métier adaptée à des flux documentaires complexes, tout en laissant 2PY affirmer son identité d’ingénierie plus large.')}
-  ${imageCarousel({
-    title: 'Aperçus de l’interface GEDeasy.',
-    text: 'Ces captures montrent une réalisation documentaire concrète : consultation, classement, validation, suivi et exploitation de flux métier dans une application maintenue dans le temps.',
-    images: gedeasyShots,
-    basePath: '/assets/gedeasy',
-    label: 'Capture GEDeasy',
-  })}
-  <section class="section"><div class="wrap">${cards([
-    ['Validation', 'Circuits, statuts, relances et responsabilités.'],
-    ['Indexation', 'Métadonnées, classement, recherche et consultation.'],
-    ['Traçabilité', 'Historique, accès, actions et preuves.'],
-    ['Évolution Dokee', 'Modernisation progressive des interfaces, des usages et des intégrations IA.'],
-  ])}</div></section>`,
+pages.set("/dokee/", layout({
+  title: "Dokee - Plateforme comptable",
+  description: "Dokee: production comptable en continu, workflows, pieces tracees, ecritures garanties.",
+  path: "/dokee/",
+  body: "<section class=\"page-head\"><div class=\"wrap\"><p class=\"eyebrow\">Dokee</p><h1>Plateforme de production comptable</h1><p class=\"lead\">Dokee connecte l’entreprise, son expert-comptable et l’ecosysteme. De la collecte des pieces a la restitution, automatisation et securisation completes.</p></div></section><section class=\"section\"><div class=\"wrap\"><p class=\"eyebrow\">Chaine</p><h2>De la piece a l’ecriture</h2><div style=\"margin:2rem 0;padding:2rem;background:#f5f5f5;border-radius:0.5rem;font-family:monospace;text-align:center;\">Piece → Lecture IA → Gabarit → Brouillon → Validation → Controle IA → Ecriture</div></div></section><section class=\"section soft\"><div class=\"wrap\"><p class=\"eyebrow\">Six principes</p><h2>Fondements</h2><div class=\"card-grid three\"><article class=\"card\"><h3>IA ne decide pas</h3><p>Responsabilite humaine. IA assiste a lire, controler, verifier.</p></article><article class=\"card\"><h3>Tout est regle</h3><p>Imputations basees sur regles publiees, testees et tracees.</p></article><article class=\"card\"><h3>Tracabilite totale</h3><p>Chaque decision, controle et modification enregistre.</p></article><article class=\"card\"><h3>Tests reels</h3><p>Regles validees sur pieces reelles de moins de 90 jours.</p></article><article class=\"card\"><h3>Pas de simulation</h3><p>Ecritures par application regles, jamais par calcul.</p></article><article class=\"card\"><h3>Responsabilite humaine</h3><p>Expert comptable comprend et verifie tous choix.</p></article></div></div></section><section class=\"section\"><div class=\"wrap\"><p class=\"eyebrow\">Analyses</p><h2>Six regards sur la vie financiere</h2><div class=\"card-grid three\"><article class=\"card\"><h3>Performance</h3><p>Chiffre affaires, EBE, rentabilite, evolution.</p></article><article class=\"card\"><h3>Depenses</h3><p>Charges fixes, variables, recurrentes.</p></article><article class=\"card\"><h3>Tresorerie</h3><p>Liquidites et decaissements.</p></article><article class=\"card\"><h3>Echeances</h3><p>TVA, charges sociales, fiscales.</p></article><article class=\"card\"><h3>Evolution</h3><p>Progression ou degradation.</p></article><article class=\"card\"><h3>Decisions</h3><p>Consequences des decisions.</p></article></div></div></section><section class=\"section soft\"><div class=\"wrap\"><p class=\"eyebrow\">Capacites</p><h2>Architecture comptable fiable</h2><div class=\"card-grid three\"><article class=\"card\"><h3>Traitement continu</h3><p>Pieces dans workflows, lues par IA, imputees selon regles.</p></article><article class=\"card\"><h3>Workflows</h3><p>Circuits parametrables, statuts explicites, responsabilites.</p></article><article class=\"card\"><h3>Indexation</h3><p>Metadonnees structurees, plans de classement.</p></article><article class=\"card\"><h3>Controles</h3><p>Equilibrage partie double, rapprochements.</p></article><article class=\"card\"><h3>Ecritures</h3><p>Generees par application regles, reproductibles.</p></article><article class=\"card\"><h3>Analyses</h3><p>Six regards decisionnels chaque periode.</p></article></div></div></section><section class=\"section cta\"><div class=\"wrap\"><h2>Dokee transforme la comptabilite en processus continu</h2><p>Plateforme pour cabinets expertise comptable qui cherchent securite et optimisation.</p><a class=\"btn primary\" href=\"/contact/\">Prendre contact</a></div></section>",
 }))
 
 pages.set('/solutions/', layout({
