@@ -3,35 +3,29 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata = buildMetadata({
   title: 'Dokee – Plateforme comptable et documentaire intégrée',
   description: 'Dokee connecte l\'entreprise, son expert-comptable et l\'écosystème de facturation électronique. De la collecte des pièces à la production comptable, automatisée et intelligente.',
-  keywords: ['plateforme comptable', 'GED comptable', 'facturation électronique', 'production comptable', 'IA documentaire'],
+  keywords: ['plateforme comptable', 'production comptable', 'facturation électronique', 'expertise comptable', 'traitement comptable'],
   path: '/dokee',
 })
 
-const keyBenefits = [
-  { title: 'Collecter', description: 'Centraliser les pièces comptables de tous les canaux' },
-  { title: 'Automatiser', description: 'Traitements et contrôles intelligents, sans intervention manuelle' },
-  { title: 'Produire', description: 'Écritures comptables fiabilisées et traçables' },
-  { title: 'Collaborer', description: 'Échanges sécurisés entre cabinet et clients' },
-  { title: 'Gouverner', description: 'Traçabilité complète et conformité réglementaire' },
-  { title: 'Innover', description: 'IA appliquée pour accélérer les traitements' },
+const analyses = [
+  { title: 'Performance', description: 'Comprendre la performance réelle de son activité : chiffre d\'affaires, EBE, rentabilité, évolution' },
+  { title: 'Dépenses', description: 'Identifier où part l\'argent : charges fixes, variables, récurrentes, engagements à venir' },
+  { title: 'Trésorerie', description: 'Anticiper les liquidités disponibles et les décaissements obligatoires' },
+  { title: 'Échéances', description: 'Prévoir les sommes à décaisser : TVA, charges sociales, fiscales' },
+  { title: 'Évolution', description: 'Mesurer ce qui progresse ou se dégrade dans l\'activité' },
+  { title: 'Décisions', description: 'Simuler les conséquences d\'une décision envisagée' },
 ]
 
-const useCases = [
-  {
-    title: 'Pour les cabinets comptables',
-    description: 'Produktivité accrue, réduction des tâches manuelles, meilleure collaboration avec les clients, vision temps réel de l\'activité comptable.',
-    icon: '📊',
-  },
-  {
-    title: 'Pour les entreprises',
-    description: 'Flux documentaires sécurisés, conformité avec la réforme de la facturation électronique, réduction des délais de traitement.',
-    icon: '🏢',
-  },
-  {
-    title: 'Pour l\'écosystème',
-    description: 'Intégration native avec les plateformes de dématérialisation (PDP/PA), accès aux flux de facturation électronique.',
-    icon: '🔗',
-  },
+const capabilities = [
+  'Traitement continu des pièces comptables',
+  'Gestion de workflows de validation paramétrables',
+  'Indexation et classification automatiques',
+  'Contrôles et conformité comptables',
+  'Production d\'écritures fiabilisées et traçables',
+  'Analyses périodiques et à échéances',
+  'Collaboration cabinet ↔ clients',
+  'Conformité facturation électronique',
+  'Audit trail complet et sécurité',
 ]
 
 export default function DokeePage() {
@@ -44,8 +38,8 @@ export default function DokeePage() {
             <h1 className="text-4xl font-black leading-tight text-ink md:text-5xl">
               Dokee
             </h1>
-            <p className="text-xl text-muted">
-              <strong>La plateforme qui connecte l'entreprise, son expert-comptable et l'écosystème numérique de la facturation.</strong>
+            <p className="text-xl text-muted font-semibold">
+              La plateforme qui connecte l'entreprise, son expert-comptable et l'écosystème numérique de la facturation.
             </p>
           </div>
           <p className="text-lg leading-relaxed text-muted max-w-3xl">
@@ -53,85 +47,84 @@ export default function DokeePage() {
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a href="/dokee/demonstration" className="btn primary">Demander une démo</a>
-            <a href="/dokee/fonctionnalites" className="btn ghost">Découvrir les fonctionnalités</a>
+            <a href="/dokee/fonctionnalites" className="btn ghost">Fonctionnalités</a>
           </div>
         </div>
       </section>
 
-      {/* Core Pillars */}
+      {/* Production Comptable */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="section-title">Une plateforme unique pour</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {keyBenefits.map((benefit) => (
-              <div key={benefit.title} className="card">
-                <h3 className="text-xl font-bold text-ink">{benefit.title}</h3>
-                <p className="mt-3 text-sm text-muted">{benefit.description}</p>
+          <h2 className="section-title">Production comptable en continu</h2>
+          <p className="text-lg text-muted mb-12 max-w-3xl">
+            Dokee traite chaque pièce dans son workflow, la contrôle, l'impute et l'intègre à la comptabilité. Les données comptables sont actualisées en permanence.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((capability) => (
+              <div key={capability} className="card">
+                <div className="flex gap-3">
+                  <span className="text-2py-600 font-bold text-xl flex-shrink-0">✓</span>
+                  <p className="font-semibold text-ink">{capability}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* AI & Automation Advantage */}
+      {/* Analyses */}
       <section className="bg-2py-50 px-6 py-20 lg:px-8">
-        <div className="mx-auto max-w-4xl space-y-8">
-          <div>
-            <h2 className="section-title">Grâce à l'intelligence artificielle</h2>
-            <p className="mt-4 text-lg text-muted">
-              Dokee transforme les flux documentaires en données exploitables, fiabilisées et immédiatement mobilisables.
-            </p>
-          </div>
-          <ul className="space-y-3">
-            {[
-              'Indexation et extraction de données automatisées',
-              'Classification intelligente des documents',
-              'Détection d\'anomalies et propositions de correction',
-              'Accélération des traitements répétitifs',
-              'Réduction des erreurs manuelles',
-            ].map((feature) => (
-              <li key={feature} className="flex gap-3 text-muted">
-                <span className="text-2py-600 font-bold">✓</span>
-                <span>{feature}</span>
-              </li>
+        <div className="mx-auto max-w-7xl">
+          <h2 className="section-title">Analyses pour la décision</h2>
+          <p className="text-lg text-muted mb-12 max-w-3xl">
+            Exploitez la richesse des données comptables pour éclairer les décisions du dirigeant, au bon moment.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {analyses.map((analysis) => (
+              <div key={analysis.title} className="card bg-white">
+                <h3 className="text-lg font-bold text-ink mb-2">{analysis.title}</h3>
+                <p className="text-sm text-muted">{analysis.description}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      {/* Key Benefits */}
+      {/* Bénéfices */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="section-title">Les bénéfices</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {[
-              'Productivité accrue des cabinets',
-              'Réduction des tâches manuelles',
-              'Collaboration renforcée avec les clients',
-              'Sécurisation des flux documentaires',
-              'Conformité avec la réforme de la facturation électronique',
-              'Vision temps réel de l\'activité comptable',
-            ].map((benefit) => (
-              <div key={benefit} className="card border-l-4 border-2py-600">
-                <p className="font-bold text-ink">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
-      <section className="bg-white px-6 py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="section-title">Adapté à vos usages</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {useCases.map((useCase) => (
-              <div key={useCase.title} className="space-y-4">
-                <div className="text-4xl">{useCase.icon}</div>
-                <h3 className="text-xl font-bold text-ink">{useCase.title}</h3>
-                <p className="text-sm text-muted">{useCase.description}</p>
-              </div>
-            ))}
+          <h2 className="section-title">Bénéfices pour tous</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
+            <div className="space-y-4">
+              <div className="text-4xl">🏢</div>
+              <h3 className="text-xl font-bold text-ink">Pour les cabinets comptables</h3>
+              <ul className="space-y-2 text-sm text-muted">
+                <li>✓ Productivité accrue</li>
+                <li>✓ Réduction des tâches manuelles</li>
+                <li>✓ Meilleure collaboration avec les clients</li>
+                <li>✓ Vision temps réel de chaque dossier</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <div className="text-4xl">🏛️</div>
+              <h3 className="text-xl font-bold text-ink">Pour les entreprises</h3>
+              <ul className="space-y-2 text-sm text-muted">
+                <li>✓ Comptabilité actualisée en continu</li>
+                <li>✓ Traçabilité complète des traitements</li>
+                <li>✓ Analyses régulières de performance</li>
+                <li>✓ Conformité automatisée</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <div className="text-4xl">🔗</div>
+              <h3 className="text-xl font-bold text-ink">Pour l'écosystème</h3>
+              <ul className="space-y-2 text-sm text-muted">
+                <li>✓ Intégration PDP/PA native</li>
+                <li>✓ Facturation électronique fluidifiée</li>
+                <li>✓ Conformité réglementaire assurée</li>
+                <li>✓ Interopérabilité documentaire</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -139,13 +132,11 @@ export default function DokeePage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-2py-600 to-2py-700 px-6 py-20 lg:px-8 text-white">
         <div className="mx-auto max-w-4xl text-center space-y-8">
-          <div>
-            <h2 className="text-3xl font-black md:text-4xl">
-              Dokee transforme la comptabilité en un processus numérique continu, collaboratif et intelligent.
-            </h2>
-          </div>
+          <h2 className="text-3xl font-black md:text-4xl">
+            Dokee transforme la comptabilité en un processus numérique continu, collaboratif et intelligent.
+          </h2>
           <p className="text-lg opacity-90">
-            Une plateforme conçue pour les organisations exigeantes qui cherchent à sécuriser, automatiser et optimiser leur production comptable.
+            Une plateforme conçue pour les cabinets d'expertise comptable et les entreprises qui cherchent à sécuriser, automatiser et optimiser leur production comptable.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/dokee/demonstration" className="btn primary bg-white text-2py-700 hover:bg-2py-50">
@@ -158,26 +149,26 @@ export default function DokeePage() {
         </div>
       </section>
 
-      {/* Key Pages Navigation */}
+      {/* Navigation */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="section-title">Découvrir davantage</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <a href="/dokee/fonctionnalites" className="card hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-ink">Fonctionnalités</h3>
-              <p className="mt-2 text-sm text-muted">Dépôt, workflow, recherche, sécurité, archivage et IA</p>
+              <p className="mt-2 text-sm text-muted">Workflow, indexation, contrôles, archivage</p>
             </a>
             <a href="/dokee/workflow" className="card hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-ink">Workflows</h3>
-              <p className="mt-2 text-sm text-muted">Circuits de validation paramétrables et maîtrisés</p>
+              <p className="mt-2 text-sm text-muted">Circuits de validation et contrôles paramétrables</p>
             </a>
             <a href="/dokee/ia-documentaire" className="card hover:shadow-lg transition-shadow">
-              <h3 className="font-bold text-ink">IA Documentaire</h3>
-              <p className="mt-2 text-sm text-muted">Extraction, classification et analyse intelligentes</p>
+              <h3 className="font-bold text-ink">Intelligence</h3>
+              <p className="mt-2 text-sm text-muted">IA pour classification et extraction</p>
             </a>
             <a href="/dokee/securite" className="card hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-ink">Sécurité</h3>
-              <p className="mt-2 text-sm text-muted">Conformité, audit trail et gouvernance</p>
+              <p className="mt-2 text-sm text-muted">Conformité, audit et gouvernance</p>
             </a>
           </div>
         </div>
