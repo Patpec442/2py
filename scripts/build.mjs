@@ -13,7 +13,7 @@ const nav = [
   ['IA appliquée', '/ia-appliquee/'],
   ['Orchestration IA', '/orchestration-ia/'],
   ['Formations IA', '/formations-ia/'],
-  ['Réalisations métier', '/realisations-metier/'],
+  ['Dokee', '/dokee/'],
   ['Références historiques', '/references-historiques/'],
   ['Contact', '/contact/'],
 ]
@@ -53,14 +53,13 @@ const journey = [
   ['IA appliquée', '/ia-appliquee/'],
   ['Orchestration IA', '/orchestration-ia/'],
   ['Formations IA', '/formations-ia/'],
-  ['Réalisations métier', '/realisations-metier/'],
+  ['Dokee', '/dokee/'],
   ['Références historiques', '/references-historiques/'],
   ['Contact', '/contact/'],
 ]
 
 const breadcrumbParents = new Map([
   ['/orchestration-ia/', [['IA appliquée', '/ia-appliquee/']]],
-  ['/dokee/', [['Réalisations métier', '/realisations-metier/']]],
   ['/solutions/', [['Expertise documentaire', '/expertise-documentaire/']]],
   ['/cas-usages.html', [['IA appliquée', '/ia-appliquee/']]],
   ['/ia-atrophie-cognitive.html', [['IA appliquée', '/ia-appliquee/']]],
@@ -155,7 +154,7 @@ function layout({ title, description, path, body, type = 'WebPage' }) {
     <div class="footer-grid">
       <div><a class="footer-brand" href="/"><strong>2PY</strong><span>— Yves · Philippe · Patrick</span></a><p>Société d’ingénierie historique, discrète et durable, construite autour de la R&D, des documents sensibles, de l’infrastructure et de l’IA raisonnée.</p></div>
       <div><h3>Ingénierie</h3><a href="/culture-rd/">Culture R&D</a><a href="/expertise-documentaire/">Expertise documentaire</a><a href="/infrastructure-souveraine/">Infrastructure souveraine</a></div>
-      <div><h3>Applications</h3><a href="/ia-appliquee/">IA appliquée</a><a href="/orchestration-ia/">Orchestration IA</a><a href="/formations-ia/">Formations IA</a><a href="/realisations-metier/">Réalisations métier</a><a href="/solutions/">Contextes métier</a><a href="/dokee/">Réalisation GEDeasy / Dokee</a></div>
+      <div><h3>Applications</h3><a href="/dokee/">Dokee</a><a href="/ia-appliquee/">IA appliquée</a><a href="/orchestration-ia/">Orchestration IA</a><a href="/formations-ia/">Formations IA</a><a href="/solutions/">Contextes métier</a></div>
       <div><h3>Confiance</h3><a href="/references-historiques/">Références historiques</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-confidentialite/">Confidentialité</a></div>
     </div>
     <p class="copyright">Copyright 2PY · Site statique sans tracking publicitaire.</p>
@@ -380,18 +379,7 @@ pages.set('/formations-ia/', layout({
   <section class="section cta"><div class="wrap"><h2>Besoin de former ou accompagner vos équipes à l’IA ?</h2><p>Le site Patrick Pécot est le point d’entrée dédié pour les formations et accompagnements IA.</p><a class="btn primary" href="https://www.patrick.pecot.eu/formations.html">Voir les formations IA</a></div></section>`,
 }))
 
-pages.set('/realisations-metier/', layout({
-  title: 'Réalisations métier, GED documentaire et développement durable',
-  description: 'GEDeasy, Dokee et réalisations métier : workflows documentaires, architecture logicielle, intégration, modernisation et continuité.',
-  path: '/realisations-metier/',
-  body: `${compactHero('Réalisations métier', 'Des logiciels conçus pour des flux documentaires réels.', 'GEDeasy / Dokee est une illustration du savoir-faire 2PY : développer, maintenir et faire évoluer des applications métier dans la durée.')}
-  ${textSection('GEDeasy / Dokee', 'Une preuve de capacité logicielle, pas une réduction de l’identité 2PY.', [`GEDeasy puis Dokee traduisent une expérience documentaire concrète : validation, indexation, classement, consultation, traçabilité, archivage et exploitation des documents. Cette réalisation s’appuie sur l’<a href="/expertise-documentaire/">expertise documentaire</a> de 2PY.`, 'La réalisation montre surtout que 2PY sait concevoir une architecture métier, la maintenir, la moderniser et l’adapter aux contraintes terrain, sans transformer le site en catalogue produit.'], ['Voir GEDeasy / Dokee', '/dokee/'])}
-  <section class="section soft"><div class="wrap">${cards([
-    ['Architecture métier', 'Modéliser des processus et les transformer en application exploitable.'],
-    ['Développement durable', 'Maintenir, moderniser et documenter plutôt que remplacer sans nécessité.'],
-    ['Intégration', 'Faire dialoguer données, accès, documents, validations et systèmes existants.'],
-  ], 'three')}</div></section>`,
-}))
+pages.set("/realisations-metier/", aliasPage("/realisations-metier/", "/dokee/", "Dokee"))
 
 pages.set('/references-historiques/', layout({
   title: 'Références historiques, confiance client et environnements sensibles',
